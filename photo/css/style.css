@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #000 url("../images/img_7.jpg") no-repeat;
+  background: rgb(0, 0, 0) url("../images/fond.jpg") no-repeat center;
   z-index: 1;
 }
 #fh5co-aside > .row {
