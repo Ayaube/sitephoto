@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Abel';
+    src: url('../fonts/Abel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Carattere';
+    src: url('../fonts/Carattere-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dancing';
+    src: url('../fonts/DancingScript.ttf') format('truetype');
+}
+
+body, html {
+    font-family: 'Diphylleia', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ececec;
+}
+
+.box span {
+    z-index: 2;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.photo span {
+    font-size: 3em;
+    font-family: 'Carattere', Arial, sans-serif;
+}
+
+.informatique span {
+    font-size: 2.5em;
+    font-family: 'Abel', Arial, sans-serif;
+}
+
+.box:hover span {
+    color: #ffffff; /* Changez à la couleur souhaitée au survol */
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 0px;
+}
+
+
+.box {
+    width: calc(30vw); /* 40% de la largeur du viewport */
+    height: calc(40vw); /* 30% de la largeur du viewport pour maintenir le ratio 4/3 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 0px; /* Espacement entre les blocs */
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.box:hover::before {
+    opacity: 0.8;
+}
+
+.photo, .informatique {
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+}
+
+.al-text {
+    font-family: 'Dancing', Arial, sans-serif;
+    font-size: 7em;
+    color: #000000;
+    user-select: none;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        flex-direction: column; /* Empiler les blocs verticalement */
+    }
+
+    .box {
+        width: 80vw; /* 80% de la largeur du viewport */
+        height: calc(60vw); /* Hauteur ajustée pour maintenir le ratio 3/4 */
+        margin: 20px auto; /* Ajuster la marge pour l'empilement vertical */
+    }
+
+    .al-text {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        order: 3;
+        font-size: 2em;
+        user-select: none;
+    }
+
+    .photo span, .informatique span {
+        font-size: calc(4vw); /* Adapter la taille de la police à la taille du bloc */
+    }
+}
+
