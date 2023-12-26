@@ -19,11 +19,13 @@ $imagesi = glob('images/informatique/*.{jpg,jpeg,png,gif}', GLOB_BRACE);
 $randomImagei = $imagesi[array_rand($imagesi)];
 ?>
 <div class="container">
-    <a href="https://photos.ayoub-lamchichi.com" class="box photo" id="photo-container">
+    <a href="https://photos.ayoub-lamchichi.com" class="box photo">
+        <div class="image" id="photo-image"></div>
         <span>Photographie</span>
     </a>
     <div class="al-text">AL</div>
-    <a href="https://informatique.ayoub-lamchichi.com" class="box informatique" id="informatique-container">
+    <a href="https://informatique.ayoub-lamchichi.com" class="box informatique">
+        <div class="image" id="informatique-image"></div>
         <span>Informatique</span>
     </a>
 </div>
