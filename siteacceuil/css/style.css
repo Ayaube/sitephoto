@@ -53,8 +53,8 @@ body, html {
 
 
 .box {
-    width: calc(30vw); /* 40% de la largeur du viewport */
-    height: calc(40vw); /* 30% de la largeur du viewport pour maintenir le ratio 4/3 */
+    width: calc(30vw); /* 30% de la largeur du viewport */
+    height: calc(40vw); /* 40% de la largeur du viewport pour maintenir le ratio 4/3 */
     background-size: cover;
     background-position: center;
     display: flex;
