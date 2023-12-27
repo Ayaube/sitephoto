@@ -13,6 +13,34 @@
     src: url('../fonts/DancingScript.ttf') format('truetype');
 }
 
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Pour cacher les barres de défilement dans Webkit et Blink (Chrome, Safari, Edge, Opera) */
+.element::-webkit-scrollbar {
+    display: none;
+}
+
+.element {
+    -ms-overflow-style: none; /* pour Internet Explorer, Edge */
+    scrollbar-width: none; /* pour Firefox */
+    overflow-y: scroll; /* pour activer le défilement vertical même sans la barre de défilement */
+}
+
+/* Pour cacher les barres de défilement dans IE, Edge (version héritée) et Firefox */
+.element {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Pour s'assurer que le défilement reste possible sans barre de défilement */
+.element {
+    overflow-y: scroll;
+}
+
+
 body, html {
     font-family: 'Diphylleia', Arial, sans-serif;
     margin: 0;
@@ -20,6 +48,7 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     background-color: #ececec;
+
 }
 
 .box span {
@@ -103,29 +132,36 @@ body, html {
 
 .al-text {
     font-family: 'Dancing', Arial, sans-serif;
-    font-size: 7em;
+    font-size: 7vw;
     color: #000000;
     user-select: none;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+
+    body, html {
+        height: auto;
+        overflow-y: auto;
+    }
+
     .container {
         margin-top: 20px;
-        flex-direction: column; /* Empiler les blocs verticalement */
+        flex-direction: column;
+        height: auto;
     }
 
     .box {
-        width: 80vw; /* 80% de la largeur du viewport */
-        height: calc(60vw); /* Hauteur ajustée pour maintenir le ratio 3/4 */
-        margin: 20px auto; /* Ajuster la marge pour l'empilement vertical */
+        width: 80vw;
+        height: calc(80vw * 4 / 3);
+        margin: 25px auto;
     }
 
     .al-text {
-        margin-top: 10px;
-        margin-bottom: 30px;
+        margin-top: 15px;
+        margin-bottom: 35px;
         order: 3;
-        font-size: 2em;
+        font-size: 2.5em;
         user-select: none;
     }
 
@@ -152,4 +188,6 @@ body, html {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+
 

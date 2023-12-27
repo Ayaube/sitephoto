@@ -37,7 +37,7 @@ $randomImagei = $imagesi[array_rand($imagesi)];
     const photoImages = <?php echo json_encode($imagesp); ?>;
     const informatiqueImages = <?php echo json_encode($imagesi); ?>;
 
-    // Initialiser le défilement d'images
+
     initImageSlideshow(photoImages, informatiqueImages);
 </script>
 </body>
