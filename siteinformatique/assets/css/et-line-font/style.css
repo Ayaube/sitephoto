@@ -9,6 +9,37 @@
 	font-style: normal;
 }
 
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+/* Pour cacher les barres de défilement dans Webkit et Blink (Chrome, Safari, Edge, Opera) */
+.element::-webkit-scrollbar {
+	display: none;
+}
+
+.element {
+	-ms-overflow-style: none; /* pour Internet Explorer, Edge */
+	scrollbar-width: none; /* pour Firefox */
+	overflow-y: scroll; /* pour activer le défilement vertical même sans la barre de défilement */
+}
+
+/* Pour cacher les barres de défilement dans IE, Edge (version héritée) et Firefox */
+.element {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+/* Pour s'assurer que le défilement reste possible sans barre de défilement */
+.element {
+	overflow-y: scroll;
+}
+
+
+
+
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	font-family: 'et-line';
@@ -340,4 +371,62 @@ you can use the generic selector below, but it's slower:
 }
 .icon-dribbble:before {
 	content: "\e063";
+}
+
+
+@media (max-width: 850px) {
+
+	.navbar-toggle {
+		margin-top: 18px;
+	}
+
+	.navbar-brand {
+		margin-bottom: 12px;
+	}
+
+	#landing-offer {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	#features-section {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	#about-team {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#about-team .col-md-6 {
+		margin-bottom: 25px;
+	}
+
+	#screenshots-section {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	#screenshots-section .feature-app-box {
+		margin-bottom: 40px;
+	}
+
+
+
+	.col-xs-24 .client img {
+		width: 20%; !important;
+		height: auto;
+	}
+
+
+
+	.features-list li {
+		margin-bottom: 20px;
+	}
+	/* Espacement après le premier <li> */
+	.left-features-box + .right-features-box {
+		margin-top: 50px;
+	}
+
+
 }
